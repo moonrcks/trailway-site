@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A rider on Trailway</title>
+<meta property="og:title" content="Ride with me on Trailway">
+<meta property="og:description" content="Follow my rides on Ohio's bike paths.">
+<style>
+  :root { --bg: #f4eee1; --card: #fbf8f1; --fg: #23291f; --muted: #5a4332; --accent: #2d4a36; --on-accent: #f4eee1; --line: #e2d8c4; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161b17; --card: #222923; --fg: #ede6d6; --muted: #cdb89a; --accent: #86b08d; --on-accent: #132017; --line: #343d35; } }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif; margin: 0; padding: 48px 16px; }
+  main { max-width: 480px; margin: 0 auto; text-align: center; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px 20px; }
+  h1 { font: 700 1.9rem/1.2 ui-serif, Georgia, serif; margin: 8px 0 4px; overflow-wrap: anywhere; }
+  .muted { color: var(--muted); }
+  .button { display: block; margin: 18px auto 0; padding: 14px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; max-width: 280px; }
+  .primary { background: var(--accent); color: var(--on-accent); }
+  .secondary { border: 1.5px solid var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <p class="muted">Ride with me on Trailway</p>
+    <h1 id="handle">A Trailway rider</h1>
+    <p class="muted">Ohio bike paths, planned and tracked.</p>
+    <a id="open" class="button primary" href="trailway://">Open in Trailway</a>
+    <a class="button secondary" href="./#get">Get Trailway</a>
+  </div>
+</main>
+<script>
+  // Only usernames Trailway allows: letters, numbers, periods and underscores.
+  const u = (new URLSearchParams(location.search).get("u") || "").toLowerCase();
+  if (/^[a-z0-9_.]{3,20}$/.test(u)) {
+    document.getElementById("handle").textContent = "@" + u;
+    document.getElementById("open").href = "trailway://rider/" + u;
+    document.title = "@" + u + " on Trailway";
+  }
+</script>
+</body>
+</html>
