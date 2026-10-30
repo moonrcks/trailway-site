@@ -88,6 +88,8 @@
       if (!rec || !rec.fields) return ended("This ride has ended, so its location is no longer shared.");
       const f = rec.fields, here = [v(f, "lat"), v(f, "lon")];
       const updated = new Date(v(f, "updatedAt")), stale = Date.now() - updated > 120000;
+      // No update for 30 minutes: the ride ended without closing properly, so stop showing where it was.
+      if (Date.now() - updated > 30 * 60000) return ended("This ride has ended, so its location is no longer shared.");
       $("who").textContent = "@" + v(f, "handle");
       $("title").textContent = v(f, "title") || "Ride";
       $("badge").textContent = stale ? "NO SIGNAL" : "LIVE"; $("badge").className = stale ? "badge off" : "badge";
