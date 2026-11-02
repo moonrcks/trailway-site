@@ -21,12 +21,12 @@
 <body>
 <main>
   <h1>Trailway Privacy Policy</h1>
-  <p class="muted">Effective October 31, 2026</p>
+  <p class="muted">Effective November 2, 2026</p>
 
   <p>Trailway (“the app”) plans bike routes on Ohio's bike paths and records your rides. This policy explains what the app stores, what leaves your device, and the choices you have. Trailway has no ads, no analytics and no tracking. It has no app server of its own: what you share is stored in Apple's iCloud, as described below.</p>
 
   <h2>Stored on your iPhone</h2>
-  <p>Your rides (GPS track, times, speed, elevation, heart rate and calories), saved routes, profile details (including date of birth, height, weight and emergency contact), your Safety settings (the Trailway riders you chose as emergency contacts), bikes and gear are stored on your iPhone, inside the app. If you also use Trailway on a Mac, your saved routes sync between your devices through your own private iCloud storage, which only you can access; nothing else syncs. Your password is stored only as a salted hash in your iCloud Keychain, which is end-to-end encrypted and available only on your own Apple devices, so you can sign in on them. Deleting the app deletes the information stored in it.</p>
+  <p>Your rides (GPS track, times, speed, elevation, heart rate and calories), saved routes, profile details (including date of birth, height, weight and emergency contact), your phone number if you add one, your Safety settings (the Trailway riders you chose as emergency contacts), bikes and gear are stored on your iPhone, inside the app. If you also use Trailway on a Mac, your saved routes sync between your devices through your own private iCloud storage, which only you can access; nothing else syncs. Your password is stored only as a salted hash in your iCloud Keychain, which is end-to-end encrypted and available only on your own Apple devices, so you can sign in on them. Deleting the app deletes the information stored in it.</p>
 
   <h2>Apple Health and Apple Watch</h2>
   <p>With your permission, Trailway saves rides to Apple Health as cycling workouts and reads heart rate, workouts and routes to show them in your rides and to import rides. New rides that other apps (such as Garmin Connect or Strava) save to Health are imported automatically when you open Trailway; you can turn this off in Settings → Connected apps &amp; import. Trailway may also add heart rate to a recent ride when another app saves it to Health later. Health data stays on your devices. It is never posted to Social, shared with third parties, sold, or used for advertising or marketing.</p>
@@ -51,6 +51,10 @@
   </table>
   <p>With <strong>Post automatically</strong> on (Settings → Social &amp; privacy), each ride you record over a quarter mile is shared when it ends, with the first and last 300 m of the route hidden. Choose <strong>Ask each time</strong> or <strong>Don't post</strong> to share rides only when you decide to.</p>
   <p>Reports you send are visible only to the developer, for review. Heart rate and other Health data are never included in shared or live rides. Your email address is never shared.</p>
+
+  <h2>Phone number and Find friends</h2>
+  <p>You can add your phone number in Settings → Social &amp; privacy → Phone number so friends who have it in their contacts can find you. The number itself stays on your iPhone. Trailway's public iCloud database stores only a one-way code made from it (a SHA-256 hash), linked to your username. These codes can't be listed or searched, so someone can find you this way only if they already have your number. Riders never see your number. You can remove it at any time on the same screen, and deleting your account removes it too.</p>
+  <p>If you allow access to your contacts, Social → Find friends reads the phone numbers in your contacts on your iPhone, turns each into the same kind of one-way code, and asks iCloud whether a rider has added it. Your contacts' names and numbers are never stored or uploaded, and Trailway never contacts them. Matches are shown only to you, with the name you have saved for that person.</p>
 
   <h2>Live rides</h2>
   <p>When you share a ride live (Share my ride live on the Ride tab, or the Live button during a ride), your current position, the path you've ridden so far, distance, speed and ride time are stored in Trailway's public iCloud database and updated every few seconds. Riders who follow you see the ride in Social → Live now, and anyone you send its private link to can watch it on a web map (moonrcks.github.io/trailway-site), which loads map images from OpenStreetMap. Unlike a shared ride, a live ride shows your exact position, including where you start. Like other Social content, it is shared even if your profile is set to “Only me”, so turn it on only when you want to.</p>
@@ -85,7 +89,8 @@
     <li>Block or report a rider or post from its menu.</li>
     <li>Stop sharing a ride live: Live → Stop sharing live during the ride. Ending the ride stops it too.</li>
     <li>Change your emergency contacts, location sharing or fall detection: Settings → Safety.</li>
-    <li>Delete your account: Settings → Account → Delete account. This removes your account, your Social profile, shared rides, follows, likes, comments, sent messages, live rides and safety alerts, and frees your username.</li>
+    <li>Remove your phone number: Settings → Social &amp; privacy → Phone number → Remove my number. Stop Find friends from reading your contacts: the Settings app → Trailway → Contacts.</li>
+    <li>Delete your account: Settings → Account → Delete account. This removes your account, your Social profile, shared rides, follows, likes, comments, sent messages, live rides, safety alerts and phone number, and frees your username.</li>
     <li>Export your rides as GPX files: Settings → Data &amp; storage.</li>
   </ul>
 
